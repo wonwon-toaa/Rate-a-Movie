@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate a Movie</title>
+<style>
+body {
+    background-color: #141b26;
+}
+h1 {
+    color: white;
+    font-family: 'Arial';
+}
+h2 {
+    color: #b0b0b0;
+    font-family: 'Arial';
+}
+label {
+    color: white;
+    font-family: 'Arial';
+}
+h3 {
+    color: #e03a3a;
+    font-family: 'Arial';
+}
+img {
+    justify-content: center;
+     ;
+    max-width: 100%;      
+    height: auto;         
+    display: block;
+    border-radius: 8px; 
+    border: 1px solid #334155;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3); 
+    }
+
+.option-item {
+    display: flex;
+    align-items: center;
+    background: #0f172a;
+    border: 1px solid #334155;
+    padding: 0.5rem 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    }
+
+.option-item input {
+    margin-right: 0.5rem;
+    accent-color: #f87171;
+    cursor: pointer;
+    }
+
+input[type="text"],
+    textarea {
+    width: 100%;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+</style>
+</head>
+<body>
+
+    <div align="center">
+        <h1>Rate a Movie</h1>
+        <h2>Write a review of your favorite movie and let others know what you think.</h2>
+        <img src="https://cdn.discordapp.com/attachments/1326008162830123041/1546769030105268254/image.png?ex=6aa0fc6a&is=6a9faaea&hm=d9cbdb3a11ed1665d16d3062a8b64ef9685a5bc2903a4b5555cc238160e26361" alt="Movie Poster" width="300" height="400">
+    </div>
+    <hr size="2" color="#334155" width="80%">
+
+    <form align="center">
+        <h2>Movie Information</h2>
+
+        <p>
+            <label for="title"><b>Title of the Movie:</b></label><br><br>
+            <input type="text" id="title" name="title" placeholder="Write title here" size="30">
+        </p>
+
+        <h3>Genre of the movie:</h3>
+        <p>
+            <div class="options-grid">
+                <div class="option-item">
+                    <input type="checkbox" id="genre-action" name="genre" value="Action">
+                    <label for="genre-action">Action</label>
+                </div>
+                <div class="option-item">
+                    <input type="checkbox" id="genre-comedy" name="genre" value="Comedy">
+                    <label for="genre-comedy">Comedy</label>
+                </div>
+                <div class="option-item">
+                    <input type="checkbox" id="genre-scifi" name="genre" value="Sci-Fi">
+                    <label for="genre-scifi">Sci-Fi</label>
+                </div>
+                <div class="option-item">
+                    <input type="checkbox" id="genre-drama" name="genre" value="Drama">
+                    <label for="genre-drama">Drama</label>
+                </div>
+                <div class="option-item">
+                    <input type="checkbox" id="genre-fantasy" name="genre" value="Fantasy">
+                    <label for="genre-fantasy">Fantasy</label>
+                </div>
+            </div>
+
+        </p>
+
+        <h3>Rating:</h3>
+        <p>
+            <div class="ratings-list">
+                <div class="option-item">
+                    <input type="radio" id="1rating" name="rating" value="1">
+                    <label for="1rating">⭐ (1/5)</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" id="2rating" name="rating" value="2">
+                    <label for="2rating">⭐⭐ (2/5)</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" id="3rating" name="rating" value="3">
+                    <label for="3rating">⭐⭐⭐ (3/5)</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" id="4rating" name="rating" value="4">
+                    <label for="4rating">⭐⭐⭐⭐ (4/5)</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" id="5rating" name="rating" value="5">
+                    <label for="5rating">⭐⭐⭐⭐⭐ (5/5)</label>
+                </div>
+            </div>
+        </p>
+
+        <h3>Share your feedback</h3>
+        <p>
+            <label for="thoughts">Write your thoughts:</label><br><br>
+            <textarea id="thoughts" name="thoughts" rows="5" cols="40" placeholder="Type here..."></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Submit Review">
+        </p>
+    </form>
+
+</body>
+</html>
